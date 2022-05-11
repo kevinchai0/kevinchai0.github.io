@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
     <title>
-        Non-Photorealistic Rendering Using Cel-Shading - HackMD
+        Non-Photorealistic Rendering Final Report - HackMD
     </title>
     <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
@@ -34,56 +34,68 @@
 </head>
 
 <body>
- 
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Non-Photorealistic-Rendering-Using-Cel-Shading" data-id="Non-Photorealistic-Rendering-Using-Cel-Shading"><a class="anchor hidden-xs" href="#Non-Photorealistic-Rendering-Using-Cel-Shading" title="Non-Photorealistic-Rendering-Using-Cel-Shading"><span class="octicon octicon-link"></span></a><span>Non-Photorealistic Rendering Using Cel-Shading</span>
-       
-    </h1>
-    <h1><a href = "milestone.html"> Milestone </a></h1>
-    <h1><a href = "final.html"> Final </a></h1>
-
-    <p><span>Kenny Chi </span><em><span>3034696302</span></em><br>
-        
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Non-Photorealistic-Rendering-Final-Report" data-id="Non-Photorealistic-Rendering-Final-Report"><a class="anchor hidden-xs" href="#Non-Photorealistic-Rendering-Final-Report" title="Non-Photorealistic-Rendering-Final-Report"><span class="octicon octicon-link"></span></a><span>Non-Photorealistic Rendering Final Report</span></h1>
+        <h1><a href = "index.html"> Proposal </a></h1>
+        <h1><a href = "milestone.html"> Milestone </a></h1>
+        <p><span>Kenny Chi </span><em><span>3034696302</span></em><br>
 <span>Kevin Chai </span><em><span>3034123005</span></em><br>
 <span>Katherine Yuhan </span><em><span>3034854993</span></em><br>
-<span>Jeffrey Shen </span><em><span>3034555577</span></em></p><hr><p><strong><span>This project will involve using cel-shading to create non-photorealistic images. We are going to be analyzing various shading techniques and applying those techniques to different images.</span></strong></p><h2 id="Problem-Description" data-id="Problem-Description"><a class="anchor hidden-xs" href="#Problem-Description" title="Problem-Description"><span class="octicon octicon-link"></span></a><span>Problem Description</span></h2><p><span>The goal of this project is to apply non-photorealistic Toon or cel shading onto 3D models. We were inspired by our collective appreciation for cartoon/video game graphics and wanted to create a project that would showcase that appreciation. All of the projects we’ve worked on in this class have involved photorealistic-based-rendering so we wanted to try something new.</span></p><p><span>Our plan is to create a model using Autodesk Maya and then apply a shader onto that model. We would try to animate the model and create a gif by applying the shader multiple times.</span></p><h2 id="Goals-and-Deliverables" data-id="Goals-and-Deliverables"><a class="anchor hidden-xs" href="#Goals-and-Deliverables" title="Goals-and-Deliverables"><span class="octicon octicon-link"></span></a><span>Goals and Deliverables</span></h2><h4 id="What-we-plan-to-deliver" data-id="What-we-plan-to-deliver"><a class="anchor hidden-xs" href="#What-we-plan-to-deliver" title="What-we-plan-to-deliver"><span class="octicon octicon-link"></span></a><span>What we plan to deliver:</span></h4><p><span>We plan to have a working shader that will be able to “cartoonize” images. We would showcase how the shader looks like on various images! Our project would take in different 3D models and output images shaded with cell shading</span></p><p><span>Here is an example of cell shading from the “Fear Effect” Video game.</span><br>
-<img src="https://i.imgur.com/hNHeAF7.png" alt="Example of Cell Shading from Fear Effect (1999)" loading="lazy"></p><p><span>In order to create this model in which we cartoonize the image, we want to create flat colors for shading the image and have the colors change in intervals. In order to implement this type of shading, we can start by using Blinn-Phong shading, then implement cell-shading by using the angle of the surface normal to determine our shading color. We want to implement different shading levels and choose the closest level of shading, in a way similar to mipmaps. This will allow us to generate the look of cell shading. We can then apply different textures to the image by importing different texture packs and applying them to our image based on the surface normal. This allows to create different types of cell-shading by either using the lighting in the environment or a custom texture map. We can create this texture map over a sphere which has every possible surface normal angle. Once we have a working cell shader, we can use Autodesk Maya to create our own custom model and apply cell shading to any type of object we choose.</span></p><p><span>We can measure our performance by seeing how long it takes to render on the Hive machine as a basis. We can implement addition acceleration structures by using KD Trees to improve our ray tracing speed as well as using Monte Carlo to improve rendering speed. We can measure how much more quickly it is able to render on the hive machine after implementing these speedups.</span></p><p><span>Through this project, we hope to learn more about how video games create these cartoonish style of characters and learn more about how to apply different textures to different 3D models. This will help answer the question of how these video games are able to create their own custom design styles in games. By delivering our custom built 3D model with a custom texture mapping we would be able to make any cartoon animation.</span></p><h4 id="What-we-hope-to-deliver" data-id="What-we-hope-to-deliver"><a class="anchor hidden-xs" href="#What-we-hope-to-deliver" title="What-we-hope-to-deliver"><span class="octicon octicon-link"></span></a><span>What we hope to deliver:</span></h4><p><span>If we are able to successfully complete our plan, we hope to create multiple models and showcase a gif of a moving animation. This would involve creating multiple models in Autodesk Maya and running the same texture map onto our object. This would allow us to create a scene with multiple objects in the same texture pack to create an interesting story. We can also try to add background images to our renders so that we have the full scene. We can then piece these images together into a gif to create our own cartoon animation!</span><br>
-<span>In addition, we can try to further accelerate our implementation by applying monte carlo acceleration to our point sampling and see if importance sampling is able to improve our render images.</span></p><p><span>This would allow us to learn how shading can be applied to cartoons and create our own little animation with our own shading style!</span></p><h2 id="Schedule" data-id="Schedule"><a class="anchor hidden-xs" href="#Schedule" title="Schedule"><span class="octicon octicon-link"></span></a><span>Schedule</span></h2><p><strong><span>Week of 4/11:</span></strong></p><ul>
-<li><span>Research and finalize design</span></li>
-<li><span>Take the Project 4 Blinn-Phong shading shader and add initial Toon shading (simple grayscale shader with a few intervals)</span>
-<ul>
-<li><span>explore different path tracers to see the effects on the simple shader</span></li>
-</ul>
-</li>
-<li><span>Implement basic Toon shader with support for 1D textures</span></li>
-</ul><p><strong><span>Week of 4/18:</span></strong></p><ul>
-<li><span>Create milestone report webpage, video, and slides</span></li>
-<li><span>Implement X Toon shading - support for different 2D textures which allows for depth of field, backlighting</span></li>
-<li><span>Add support for sketch shading and metal shading, and begin to create shader for animation</span></li>
-</ul><p><strong><span>Week of 4/25:</span></strong></p><ul>
-<li><span>Write our final report webpage</span></li>
-<li><span>Add a way for user to specify different meshes and different shaders</span></li>
-<li><span>Record an animation of an object we create in Autodesk Maya (object moving through different lighting depths)</span></li>
-</ul><p><strong><span>Week of 5/2:</span></strong></p><ul>
-<li><span>Wrap up our final presentations</span></li>
-<li><span>If we have time, add ray tracing to allow for different lighting effects</span></li>
-</ul><h2 id="Resources" data-id="Resources"><a class="anchor hidden-xs" href="#Resources" title="Resources"><span class="octicon octicon-link"></span></a><span>Resources</span></h2><h3 id="Software-resources" data-id="Software-resources"><a class="anchor hidden-xs" href="#Software-resources" title="Software-resources"><span class="octicon octicon-link"></span></a><span>Software resources</span></h3><ul>
-<li><span>Project 4 codebase</span></li>
-<li><span>OpenGL - GLSL Shaders</span></li>
-<li><span>Autodesk Maya</span></li>
-</ul><h3 id="References" data-id="References"><a class="anchor hidden-xs" href="#References" title="References"><span class="octicon octicon-link"></span></a><span>References</span></h3><p><a href="https://raulreyesfinalproject.files.wordpress.com/2012/12/dissertation_cell-shading-raul_reyes_luque.pdf" target="_blank" rel="noopener"><span>Reyes Luque, Raul. 2012. The Cel Shading Technique.</span></a></p><p><span>Anjyo, Ken-ichi., and Hiramitsu, Katsuaki. 2003. Stylized highlights for cartoon rendering and animation. IEEE Computer Graphics and Applications.</span></p><p><span>Barla, P., Thollot, J., and Markosian, L. 2006. X8Toon: An Extended Toon Shader. In International Symposium on Non-Photorealistic Animation and Rendering.</span></p></div>
+<span>Jeffrey Shen </span><em><span>3034555577</span></em></p><h2 id="Abstract" data-id="Abstract"><a class="anchor hidden-xs" href="#Abstract" title="Abstract"><span class="octicon octicon-link"></span></a><span>Abstract</span></h2><p><span>The goal of this project is to apply non-photorealistic Toon or cel shading onto 3D models. Instead of a smooth gradient effect, toon shading mimics the flat appearance of 2D cartoons. We were inspired by our collective appreciation for cartoon/video game graphics and wanted to create a project that would showcase that appreciation. All of the projects we’ve worked on in this class have involved photorealistic-based-rendering so we wanted to try something new.</span></p><p><span>Using the three.js API, we created a toon shader that we can apply to any objects. We showcase our toon shader applied on scenes with objects of varying textures map, lighting changes, gradient tone maps, and geometries. We also used our own models and our shader to create animations!</span></p><h2 id="Technical-approach" data-id="Technical-approach"><a class="anchor hidden-xs" href="#Technical-approach" title="Technical-approach"><span class="octicon octicon-link"></span></a><span>Technical approach</span></h2><p><span>We started with a basic toon shader in GLSL in which  interpolated intensity is used to compute the tone for each fragment. The object’s colors are reduced to two discrete shades. This gives the shader a flat look where the shadow and highlight have a distinct border.</span><br>
+<img src="https://i.imgur.com/gdQeUgq.png" alt="" loading="lazy"></p><p><span>In order to create more options for tone variation, we mapped gradients of varying scales to different values of intensity. Below, we can see a three-toned (left) and five-toned (right) version of our toon shader.</span></p><table>
+<thead>
+<tr>
+<th><img src="https://i.imgur.com/Dmolb4o.png" alt="" loading="lazy"></th>
+<th><img src="https://i.imgur.com/BmC4B4h.png" alt="" loading="lazy"></th>
+</tr>
+</thead>
+</table><p><span>Using bump maps, we were able to achieve interesting effects and variations. We used various texture images to create a bump map in order to alter the percieved depth of an object’s surface. In combination with our toon shader, the bump maps give the objects a rougher texture but maintain the discrete boundaries between shadows and highlights.</span><br>
+<img src="https://i.imgur.com/dapCFEe.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/CcruUmc.png" alt="" loading="lazy"></p><p><span>We also tried out implementing a cross-hatching and dotted shader. The cross-hatching and dotted shading variations are created using a tonal art map which are mipmap levels of shading corresponding to the amount of light on the object. However, we realized the direction of the cross hatching strokes have a large effect on the sense of 3 dimensionality of the object. As you can see below, the crossing of the lines shows how the object seems to look more 2 dimensional which is an aspect of toon shading we didn’t realize. For specific instances, however, when artists want to create characters in 2D worlds, this type of cross-hatching would work perfectly and definitely showcases a different aspect of non-photorealistic rendering.</span></p><p><img src="https://i.imgur.com/9bmY5fU.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/wAnJMiE.png" alt="" loading="lazy"></p><p><span>In order to display our toon shaders, we used WebGL and the Three.js API to create a scene with multiple rotating objects and a moving point light source. We had to make sure to reset the normal vector toward the light source that would be moving to ensure that our shading still follows our lightning.</span></p><p><span>In order to create our own animations, we first looked at various examples of Three.js animations. It was difficult and time-consuming to understand how to work with the Three.js API and our own custom models.</span></p><p><span>We decided to try to emulate the rocket image below in our own simulator. We first imported the rocket as a gltf using a built in GLTFLoader. Then, we iterated through each of the mesh’s in the gltf and applied our custom toon shader texture. After that, we utilized some kinematics equations in order to animate the rocket farther, allowing it to move in a projectile motion.</span></p><h4 id="Problems-we-ran-into" data-id="Problems-we-ran-into"><a class="anchor hidden-xs" href="#Problems-we-ran-into" title="Problems-we-ran-into"><span class="octicon octicon-link"></span></a><span>Problems we ran into</span></h4><p><span>It was hard to implement the kinematics gravitational motion, as we had a lot of trouble figuring out how to keep track of time and make sure that the rocket stayed in frame the whole time. We ended up slowing time down by 100x in order to make sure that the rocket didn’t fly too fast out of the camera frame.</span></p><h4 id="Final-Animation-gifs" data-id="Final-Animation-gifs"><a class="anchor hidden-xs" href="#Final-Animation-gifs" title="Final-Animation-gifs"><span class="octicon octicon-link"></span></a><span>Final Animation gifs</span></h4><p><strong><span>Reference Image</span></strong><br>
+<img src="https://i.imgur.com/gZ6tIvx.gif" alt="" loading="lazy"></p><p><strong><span>Final Result with Gravity and Textures</span></strong><br>
+<img src="https://i.imgur.com/Gt8idFZ.gif" alt="" loading="lazy"></p><h3 id="Lessons-Learned" data-id="Lessons-Learned"><a class="anchor hidden-xs" href="#Lessons-Learned" title="Lessons-Learned"><span class="octicon octicon-link"></span></a><span>Lessons Learned</span></h3><p><span>We learned much more about working with the Three.js API, especially working with JavaScript to render since we’ve mainly been working with C++ in our class projects. We also were able to play around with different types of shaders, textures/bump mapping, lightning, tones, shapes and see how it affects our renders. We thought this was really cool since were able to see immediate results and see how whenever we change the lighting or texture, the image changes. We also have a greater appreciation for the amount of work that goes into animation styles, even as unrealistic as it is, as well as for cartoons and video game renders! After working on our project, we thought it was really cool being able to create our render with our own shader!</span></p><h2 id="Results" data-id="Results"><a class="anchor hidden-xs" href="#Results" title="Results"><span class="octicon octicon-link"></span></a><span>Results</span></h2><p><img src="https://i.imgur.com/JKySV92.gif" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/jnwXWez.gif" alt="" loading="lazy"></p><p><img src="https://i.imgur.com/StTi6L0.png" alt="" loading="lazy"><br>
+<img src="https://i.imgur.com/RViwwLM.png" alt="" loading="lazy"></p><p><img src="https://i.imgur.com/E1HIpe9.png" alt="" loading="lazy"></p><h2 id="Final-Video" data-id="Final-Video"><a class="anchor hidden-xs" href="#Final-Video" title="Final-Video"><span class="octicon octicon-link"></span></a><span>Final Video</span></h2><iframe width="100%" height="400" src="https://www.youtube.com/embed/kYLc0qhkSKU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://www.youtube.com/watch?v=kYLc0qhkSKU" target="_blank" rel="noopener"><span>https://www.youtube.com/watch?v=kYLc0qhkSKU</span></a></p><h2 id="References" data-id="References"><a class="anchor hidden-xs" href="#References" title="References"><span class="octicon octicon-link"></span></a><span>References</span></h2><p><a href="https://raulreyesfinalproject.files.wordpress.com/2012/12/dissertation_cell-shading-raul_reyes_luque.pdf" target="_blank" rel="noopener"><span>Reyes Luque, Raul. 2012. The Cel Shading Technique.</span></a></p><p><span>Anjyo, Ken-ichi., and Hiramitsu, Katsuaki. 2003. Stylized highlights for cartoon rendering and animation. IEEE Computer Graphics and Applications.</span></p><p><span>Barla, P., Thollot, J., and Markosian, L. 2006. X8Toon: An Extended Toon Shader. In International Symposium on Non-Photorealistic Animation and Rendering.</span></p><p><a href="https://hhoppe.com/hatching.pdf" target="_blank" rel="noopener"><span>Praun, Hoppe, Webb, Finkelstein. 2001. Real-time hatching. SIGGRAPH '01</span></a></p><h2 id="Contributions-from-each-team-member" data-id="Contributions-from-each-team-member"><a class="anchor hidden-xs" href="#Contributions-from-each-team-member" title="Contributions-from-each-team-member"><span class="octicon octicon-link"></span></a><span>Contributions from each team member</span></h2><p><span>Every time we worked on the project we were on a Discord call together. We didn’t really do anything separately since we were always helping each other out! Katherine &amp; Jeffrey took lead in explaining the basics of Three.js and how to use the API to get what we wanted. They also had a bunch of models they made in previous classes that really helped us test our shader. Kevin &amp; Kenny worked on animations and learned how to use other functions in Three.js to load custom objects and create animations. They used kinematics to create a gravitational effect on the objects, as well as imported other 3D models to test the toon shader and animation on. We all worked together on the slides, videos, and web reports. Overall, we had a lot of fun together and really enjoyed this project!</span></p><p><img src="https://i.imgur.com/bc9Fwbd.jpg" alt="" loading="lazy"></p></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                
-                
+                <div class="toc"><ul class="nav">
+<li><a href="#Non-Photorealistic-Rendering-Final-Report" title="Non-Photorealistic Rendering Final Report">Non-Photorealistic Rendering Final Report</a><ul class="nav">
+<li><a href="#Abstract" title="Abstract">Abstract</a></li>
+<li><a href="#Technical-approach" title="Technical approach">Technical approach</a><ul class="nav">
+<li><a href="#Lessons-Learned" title="Lessons Learned">Lessons Learned</a></li>
+</ul>
+</li>
+<li><a href="#Results" title="Results">Results</a></li>
+<li><a href="#Final-Video" title="Final Video">Final Video</a></li>
+<li><a href="#References" title="References">References</a></li>
+<li><a href="#Contributions-from-each-team-member" title="Contributions from each team member">Contributions from each team member</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
             </ul>
         </div>
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
-        
+        <div class="toc"><ul class="nav">
+<li><a href="#Non-Photorealistic-Rendering-Final-Report" title="Non-Photorealistic Rendering Final Report">Non-Photorealistic Rendering Final Report</a><ul class="nav">
+<li><a href="#Abstract" title="Abstract">Abstract</a></li>
+<li><a href="#Technical-approach" title="Technical approach">Technical approach</a><ul class="nav">
+<li><a href="#Lessons-Learned" title="Lessons Learned">Lessons Learned</a></li>
+</ul>
+</li>
+<li><a href="#Results" title="Results">Results</a></li>
+<li><a href="#Final-Video" title="Final Video">Final Video</a></li>
+<li><a href="#References" title="References">References</a></li>
+<li><a href="#Contributions-from-each-team-member" title="Contributions from each team member">Contributions from each team member</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
