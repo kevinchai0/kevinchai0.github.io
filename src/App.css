@@ -1,0 +1,119 @@
+html {
+  background-color: #e1ebf2;
+}
+
+.App {
+  text-align: center;
+  background-color: #e1ebf2;
+  height: 100vh;
+  min-height: 100vh;
+  justify-content: center;
+  padding-bottom: 200px;
+  
+}
+
+.ToolBar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 2.5%;
+  background-color:#ffffff;
+  
+
+}
+.ToolBarName {
+  margin-left: 2%;
+}
+
+.ToolBarButtons {
+  font-weight: bold;
+  color:#80aacf;
+  display:flex;
+  gap: 20%;
+}
+
+.About {
+  display:flex; 
+  margin-left: 10%;
+  margin-right:10%;
+  margin-top: 5%;
+
+  justify-content: space-evenly;
+  
+}
+
+.Me {
+ width: 50%;
+ height: auto;
+}
+
+.Portrait {
+  margin-top:10%;
+  width: 50%;
+  height: auto;
+  border-radius:50%;
+  outline: #dfe6ed;
+  outline-style:auto;
+
+
+}
+
+.Email {
+  margin-top: 2.5%;
+  
+ 
+  
+}
+.All-Text-Container {
+  background-color: #ffffff;
+  outline-color: #dfe6ed;
+  outline: #dfe6ed;
+  outline-style: solid;
+  padding-bottom: 4%;
+  
+
+}
+.All-Text {
+  margin-left: 5%;
+  display:flex; 
+  flex-direction:column;
+  text-align:left;
+  margin-right: 10%;
+  font-size:large;
+  line-height: 2;
+  
+}
+
+h2 {
+ color:#80aacf;
+}
+
+.Text {
+  margin-top: 2%;
+  line-height: 2;
+}
+
+.Text2 {
+  margin-top: 2%;
+}
+
+
+.ResumeContainer {
+ margin: 5%;
+ 
+}
+
+.Resume {
+  width: 100vh;
+  outline: #dfe6ed;
+  outline-style: solid;
+  padding-bottom: 200px;
+  
+  
+
+
+}
+
+
